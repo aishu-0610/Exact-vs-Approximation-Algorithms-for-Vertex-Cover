@@ -5,6 +5,7 @@ def is_vertex_cover(edges, cover):
             return False
     return True
 
+
 def generate_subsets(vertices, k, start, current, all_subsets):
     if len(current) == k:
         all_subsets.append(current[:])
@@ -14,6 +15,7 @@ def generate_subsets(vertices, k, start, current, all_subsets):
         current.append(vertices[i])
         generate_subsets(vertices, k, i + 1, current, all_subsets)
         current.pop()
+
 
 def optimal_vertex_cover(vertices, edges):
     n = len(vertices)
@@ -27,6 +29,7 @@ def optimal_vertex_cover(vertices, edges):
                 return set(subset)
 
     return set()
+
 
 def greedy_vertex_cover(vertices, edges):
     remaining_edges = edges[:]
@@ -44,6 +47,7 @@ def greedy_vertex_cover(vertices, edges):
 
     return cover
 
+
 def compare_vertex_cover(vertices, edges):
     opt = optimal_vertex_cover(vertices, edges)
     greedy = greedy_vertex_cover(vertices, edges)
@@ -52,7 +56,20 @@ def compare_vertex_cover(vertices, edges):
     print("Greedy Vertex Cover :", greedy, "Size:", len(greedy))
     print("Approximation Ratio :", len(greedy) / len(opt))
 
-V = [0, 1, 2, 3]
-E = [(0, 1), (1, 2)]
+def read_graph():
+    n = int(input("Enter number of vertices: "))
+    vertices = list(range(n))
 
+    m = int(input("Enter number of edges: "))
+    edges = []
+
+    print("Enter edges (u v):")
+    for _ in range(m):
+        u, v = map(int, input().split())
+        edges.append((u, v))
+
+    return vertices, edges
+
+
+V, E = read_graph()
 compare_vertex_cover(V, E)
