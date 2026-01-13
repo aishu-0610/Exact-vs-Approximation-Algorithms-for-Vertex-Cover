@@ -1,7 +1,7 @@
 # Exact-vs-Approximation-Algorithms-for-Vertex-Cover
 
 Overview:
-This project implements and compares two algorithms for the Vertex Cover problem, a classical NP-hard problem in graph theory. The goal is to study the trade-off between optimality and algorithmic simplicity by contrasting an exact exponential-time solution with a simple greedy approximation.
+This project studies two algorithms for the Vertex Cover problem, a classical NP-hard problem in graph theory. The goal is to study the trade-off between optimality and algorithmic simplicity by contrasting an exact exponential-time solution with a simple greedy approximation.
 The implementation is intentionally restricted to small graph instances to allow direct comparison between optimal and heuristic solutions.
 
 Methodology:
@@ -24,4 +24,4 @@ Key Concepts Demonstrated:
 - Greedy heuristics and approximation ratios
 
 Academic Context:
-This project supports my interest in graph theory, combinatorial optimisation, and approximation algorithms, particularly in understanding how heuristic methods trade optimality for efficiency. It serves as preparatory work for engaging with research on algorithmic guarantees and limitations.
+This project serves as preparatory work for engaging with graph theory, combinatorial optimisation, and approximation algorithms, particularly in understanding how heuristic methods trade optimality for efficiency. It serves as preparatory work for engaging with research on algorithmic guarantees and limitations.
